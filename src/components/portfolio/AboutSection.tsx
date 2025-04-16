@@ -43,7 +43,7 @@ const AboutSection = () => {
             <div className="w-20 h-1 bg-portfolio-purple mb-6"></div>
             
             <p className="text-portfolio-gray mb-4">
-              Hello! I'm a passionate front-end developer with a keen eye for design and a love for creating seamless user experiences. My journey in web development started 5 years ago, and I've been crafting digital experiences ever since.
+              Hello! I'm Ahmed Ezzat, a passionate front-end developer with a keen eye for design and a love for creating seamless user experiences. My journey in web development started 5 years ago, and I've been crafting digital experiences ever since.
             </p>
             
             <p className="text-portfolio-gray mb-6">
@@ -55,7 +55,7 @@ const AboutSection = () => {
                 <div className="w-2 h-2 rounded-full bg-portfolio-teal mt-2 mr-2"></div>
                 <div>
                   <h3 className="font-medium">Name:</h3>
-                  <p className="text-portfolio-gray">John Developer</p>
+                  <p className="text-portfolio-gray">Ahmed Ezzat</p>
                 </div>
               </div>
               
@@ -63,7 +63,7 @@ const AboutSection = () => {
                 <div className="w-2 h-2 rounded-full bg-portfolio-teal mt-2 mr-2"></div>
                 <div>
                   <h3 className="font-medium">Email:</h3>
-                  <p className="text-portfolio-gray">hello@example.com</p>
+                  <p className="text-portfolio-gray">ahmed.ezzat@example.com</p>
                 </div>
               </div>
               
@@ -71,7 +71,7 @@ const AboutSection = () => {
                 <div className="w-2 h-2 rounded-full bg-portfolio-teal mt-2 mr-2"></div>
                 <div>
                   <h3 className="font-medium">Location:</h3>
-                  <p className="text-portfolio-gray">New York, USA</p>
+                  <p className="text-portfolio-gray">Cairo, Egypt</p>
                 </div>
               </div>
               
