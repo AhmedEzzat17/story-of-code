@@ -18,12 +18,14 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-portfolio-teal mb-2 tracking-wider font-medium">FRONT-END DEVELOPER</p>
+          <p className="text-portfolio-teal mb-2 tracking-wider font-medium">AHMED EZZAT | FRONT-END DEVELOPER</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 hero-glow">
-            Crafting <span className="text-gradient purple-gradient">Digital</span> Experiences
+            Crafting <span className="text-gradient purple-gradient">Digital</span> 
+            <br />
+            Experiences with <span className="text-gradient teal-gradient">Code</span>
           </h1>
           <p className="text-xl text-portfolio-gray mb-8">
-            I build beautiful, interactive, and responsive web applications with modern technologies and creative design principles.
+            I transform ideas into elegant, interactive web solutions that breathe life into digital landscapes.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
