@@ -116,9 +116,8 @@ const HeroSection = () => {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1, duration: 0.9 }}
       >
-        <span className="text-portfolio-gray text-sm mb-2">Scroll Down</span>
         <div className="w-6 h-10 border-2 border-portfolio-gray/50 rounded-full flex justify-center">
           <motion.div 
             className="w-1.5 h-1.5 bg-portfolio-teal rounded-full mt-2"
