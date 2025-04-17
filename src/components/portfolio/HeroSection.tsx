@@ -58,7 +58,7 @@ const HeroSection = () => {
               Ahmed Ezzat
             </span>
             <br />
-            Full Stack Developer
+            front End Developer
           </h1>
           
           <p className="text-portfolio-gray text-lg mb-6 font-medium">
@@ -71,7 +71,7 @@ const HeroSection = () => {
               <Download className="w-5 h-5" />
               Download CV
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" style={{color:"black"}} size="lg">
               Contact Me
             </Button>
           </div>
