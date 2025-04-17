@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import Navbar from "@/components/portfolio/Navbar";
 import HeroSection from "@/components/portfolio/HeroSection";
 import AboutSection from "@/components/portfolio/AboutSection";
@@ -6,10 +6,10 @@ import SkillsSection from "@/components/portfolio/SkillsSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
 import ContactSection from "@/components/portfolio/ContactSection";
 import FooterSection from "@/components/portfolio/FooterSection";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Index = () => {
-  // Add smooth scroll behavior
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -36,15 +36,49 @@ const Index = () => {
     };
   }, []);
 
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const SectionWrapper = ({ children }: { children: React.ReactNode }) => {
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+      threshold: 0.1
+    });
+
+    return (
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={fadeInVariants}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        {children}
+      </motion.div>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-portfolio-deep-purple text-portfolio-white">
       <Navbar />
       <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
-      <FooterSection />
+      <SectionWrapper>
+        <AboutSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <SkillsSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <ProjectsSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <ContactSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <FooterSection />
+      </SectionWrapper>
     </div>
   );
 };
