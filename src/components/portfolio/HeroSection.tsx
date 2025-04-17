@@ -112,7 +112,7 @@ const HeroSection = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <motion.div 
+{/*       <motion.div 
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ const HeroSection = () => {
             transition={{ duration: 1.5, repeat: Infinity }}
           />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
