@@ -87,7 +87,7 @@ const HeroSection = () => {
           <div className="relative z-10">
             <img 
 {/*               src="/lovable-uploads/c406d1e7-b0fa-46d9-9a93-51d112166c2c.png" */}
-              src="/lovable-uploads/2025-04-12 at 19.01.45_97dd55a6.png"
+{/*               src="/lovable-uploads/2025-04-12 at 19.01.45_97dd55a6.png" */}
               alt="Ahmed Ezzat - Developer" 
               className="w-full max-w-md mx-auto rounded-xl shadow-2xl animate-float"
             />
