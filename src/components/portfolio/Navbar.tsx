@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Code, Terminal } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +29,18 @@ const Navbar = () => {
       isScrolled ? "bg-portfolio-deep-purple/90 backdrop-blur-md py-2 shadow-md" : "bg-transparent py-4"
     )}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold text-gradient purple-gradient">dev.code</a>
+        <a href="#home" className="flex items-center gap-2 group">
+          <div className="relative">
+            <Code className="w-8 h-8 text-portfolio-teal rotate-12 transition-transform group-hover:rotate-0" />
+            <Terminal className="w-6 h-6 text-portfolio-purple absolute -bottom-1 -right-1 -rotate-12 transition-transform group-hover:rotate-0" />
+          </div>
+          <div className="flex flex-col items-start">
+            <span className="text-xl font-bold bg-gradient-to-r from-portfolio-teal to-portfolio-purple bg-clip-text text-transparent">
+              Ahmed Ezzat
+            </span>
+            <span className="text-xs text-portfolio-gray tracking-wider">DEVELOPER</span>
+          </div>
+        </a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
