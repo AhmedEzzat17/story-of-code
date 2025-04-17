@@ -1,5 +1,5 @@
-
 import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Code, Terminal } from 'lucide-react';
 
 const FooterSection = () => {
   const currentYear = new Date().getFullYear();
@@ -9,11 +9,19 @@ const FooterSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and copyright */}
-          <div className="mb-4 md:mb-0">
-            <a href="#home" className="text-xl font-bold text-gradient purple-gradient">dev.code</a>
-            <p className="text-sm text-portfolio-gray mt-2">
-              &copy; {currentYear} All rights reserved
-            </p>
+          <div className="mb-4 md:mb-0 flex items-center gap-2 group">
+            <div className="relative">
+              <Code className="w-8 h-8 text-portfolio-teal rotate-12 transition-transform group-hover:rotate-0" />
+              <Terminal className="w-6 h-6 text-portfolio-purple absolute -bottom-1 -right-1 -rotate-12 transition-transform group-hover:rotate-0" />
+            </div>
+            <div className="flex flex-col items-start">
+              <a href="#home" className="text-xl font-bold bg-gradient-to-r from-portfolio-teal to-portfolio-purple bg-clip-text text-transparent">
+                Ahmed Ezzat
+              </a>
+              <p className="text-sm text-portfolio-gray mt-2">
+                &copy; {currentYear} All rights reserved
+              </p>
+            </div>
           </div>
           
           {/* Footer navigation */}
