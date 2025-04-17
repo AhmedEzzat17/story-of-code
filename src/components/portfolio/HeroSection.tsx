@@ -64,7 +64,7 @@ const HeroSection = () => {
           <p className="text-portfolio-gray text-lg mb-6 font-medium">
             Creating innovative web solutions with cutting-edge technologies. 
             Transforming ideas into elegant, efficient digital experiences.
-          </p>
+{/*           </p>
           
           <div className="flex space-x-4">
             <Button variant="default" size="lg" className="flex items-center gap-2">
@@ -74,7 +74,7 @@ const HeroSection = () => {
             <Button variant="outline" style={{color:"black"}} size="lg">
               Contact Me
             </Button>
-          </div>
+          </div> */}
         </motion.div>
         
         {/* Image Content */}
