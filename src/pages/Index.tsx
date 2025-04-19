@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/portfolio/Navbar";
 import HeroSection from "@/components/portfolio/HeroSection";
@@ -8,6 +9,7 @@ import ContactSection from "@/components/portfolio/ContactSection";
 import FooterSection from "@/components/portfolio/FooterSection";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   useEffect(() => {
@@ -62,6 +64,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-portfolio-deep-purple text-portfolio-white">
+      <div className="fixed top-4 right-4 z-50 flex gap-4">
+        <Button variant="default" size="sm" className="bg-portfolio-purple">
+          React Version
+        </Button>
+        <Button 
+          variant="outline" 
+          size="sm"
+          onClick={() => window.location.href = '/basic'}
+          className="text-portfolio-gray hover:text-portfolio-teal"
+        >
+          HTML Version
+        </Button>
+      </div>
       <Navbar />
       <HeroSection />
       <SectionWrapper>
