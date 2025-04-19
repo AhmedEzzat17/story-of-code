@@ -1,4 +1,3 @@
-
 :root {
     --teal: #33C3F0;
     --purple: #8B5CF6;
@@ -110,4 +109,107 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Additional Styles */
+.card {
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.badge {
+    padding: 0.5em 1em;
+}
+
+.bg-teal {
+    background-color: var(--teal) !important;
+}
+
+.bg-purple {
+    background-color: var(--purple) !important;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(51, 195, 240, 0.25);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation styles */
+.navbar {
+    transition: background-color 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(15, 23, 42, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    position: relative;
+    color: var(--gray) !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--teal) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--teal);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .floating {
+        animation: none;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
 }

@@ -1,4 +1,3 @@
-
 // Initialize GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +24,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Enhanced animations for sections
+const sections = document.querySelectorAll('section');
+sections.forEach(section => {
+    gsap.from(section.querySelectorAll('.fade-in-left, .fade-in-right'), {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+});
+
+// Card hover effects
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            scale: 1.03,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            scale: 1,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// Form submission handling
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Message sent successfully!');
+        contactForm.reset();
+    });
+}
 
 // Fade in animations
 const fadeElements = document.querySelectorAll('.fade-in-left, .fade-in-right');
