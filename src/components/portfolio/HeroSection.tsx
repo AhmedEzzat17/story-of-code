@@ -24,16 +24,26 @@ const HeroSection = () => {
     hidden: {
       opacity: 0,
       x: 100,
-      scale: 0.9
+      scale: 0.8
     },
     visible: {
       opacity: 1,
       x: 0,
       scale: 1,
+      rotate: [0, 2, -2, 0],
       transition: {
         duration: 1,
         ease: "easeOut",
-        delay: 0.2
+        delay: 0.2,
+        type: "spring",
+        stiffness: 50
+      }
+    },
+    hover: {
+      scale: 1.05,
+      rotate: 0,
+      transition: { 
+        duration: 0.3 
       }
     }
   };
@@ -82,14 +92,14 @@ const HeroSection = () => {
           variants={imageVariants}
           initial="hidden"
           animate="visible"
-          className="relative"
+          whileHover="hover"
+          className="relative group"
         >
           <div className="relative z-10">
             <img 
-{/*               src="/lovable-uploads/c406d1e7-b0fa-46d9-9a93-51d112166c2c.png" */}
-{/*               src="/lovable-uploads/2025-04-12 at 19.01.45_97dd55a6.png" */}
+              src="/lovable-uploads/8f60ba9a-f2e1-47ce-ae55-3708236a77db.png" 
               alt="Ahmed Ezzat - Developer" 
-              className="w-full max-w-md mx-auto rounded-xl shadow-2xl animate-float"
+              className="w-full max-w-md mx-auto rounded-xl shadow-2xl animate-float transition-all duration-300 group-hover:shadow-xl"
             />
           </div>
           
@@ -111,22 +121,6 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
-      
-      {/* Scroll Indicator */}
-{/*       <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.9 }}
-      >
-        <div className="w-6 h-10 border-2 border-portfolio-gray/50 rounded-full flex justify-center">
-          <motion.div 
-            className="w-1.5 h-1.5 bg-portfolio-teal rounded-full mt-2"
-            animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </div>
-      </motion.div> */}
     </section>
   );
 };
